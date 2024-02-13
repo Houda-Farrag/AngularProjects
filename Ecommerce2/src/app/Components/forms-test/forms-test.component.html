@@ -1,0 +1,32 @@
+<div class="container col-6 " style="height: auto; ">
+    <h2>Reactive Form</h2>
+    <form class="justify-content-center p-5 border border-5 my-4  rounded-4 bg-opacity-25 ">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input [formControl]="formEmail1" type="email" class="form-control" id="email1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input [formControl]="formpassword1" type="password" class="form-control" id="pass1" placeholder="Password">
+        </div>
+
+        <button type="submit" class="mt-3  btn btn-primary" (click)="printData1($event)">Submit</button>
+    </form>
+    <h2>Template-Driven Form</h2>
+    <form class="justify-content-center border border-4 p-5 my-4 ">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input [(ngModel)]="formEmail2" name="templateD_E" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="Enter email">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input [(ngModel)]="formpassword2" type="password" class="form-control" id="exampleInputPassword1"
+                placeholder="Password" name="templateD_P">
+        </div>
+
+        <button type="submit" class="mt-3  btn btn-primary" (click)="printData2($event)">Submit</button>
+    </form>
+</div>

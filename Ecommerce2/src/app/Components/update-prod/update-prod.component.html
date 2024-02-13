@@ -1,0 +1,32 @@
+<div class="container w-50 ">
+    <h2>Product data to Updated </h2>
+    <img [src]="productUpdateData.PrdimgURL" width="400" height="400" alt="">
+    <form class=" justify-content-center border border-4 p-5 my-4 ">
+        <div>
+            <label for="" class="form-label ">NameProd</label>
+            <input name="nameprd" class="form-control " type="text" [(ngModel)]="productUpdateData.name">
+        </div>
+        <div>
+            <label for="" class="form-label ">priceProd</label>
+            <input name="priceprd" class="form-control " type="text" [(ngModel)]="productUpdateData.price">
+        </div>
+        <div>
+            <label for="" class="form-label ">catigoryIDProd</label>
+            <input name="catigoryprd" class="form-control " type="text" [(ngModel)]="productUpdateData.categoryID">
+        </div>
+        <div>
+            <label for="" class="form-label ">MaterialProd</label>
+            <input name="MaterialPrd" class="form-control " type="text" [(ngModel)]="productUpdateData.Material">
+        </div>
+        <div>
+            <label for="" class="form-label ">quantityProd</label>
+            <input name="quantityPrd" class="form-control " type="text" [(ngModel)]="productUpdateData.quantity">
+        </div>
+        <div>
+            <label for="" class="form-label ">imgurlProd</label>
+            <input name="imgPrd" class="form-control " type="text" [(ngModel)]="productUpdateData.PrdimgURL">
+        </div>
+        <button class="btn btn-success my-3 " (click)="updateProduct()">update</button>
+    </form>
+
+</div>

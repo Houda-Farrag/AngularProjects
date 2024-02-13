@@ -1,0 +1,25 @@
+.h-calss {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.h-calss :hover {
+    background: chartreuse;
+}
+
+.hover-style {
+    transition: transform 1.5s;
+    // transform: translatex(150px, 150px);
+    width: 50%;
+    height: 50%;
+
+}
+
+.hover-style:hover {
+
+    transform: translateZ(50px, 50px);
+    // transform: rotateZ(90deg);
+    transform: rotatey(150deg);
+    transform: scale(1.2, 1.1);
+}

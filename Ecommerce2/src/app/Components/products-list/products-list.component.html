@@ -1,0 +1,41 @@
+<div class="container my-3 ">
+
+    <div class="row">
+
+        @for(item of productFilterd ; track item.id){
+
+        <div class="justify-content-around  rounded-3 col-sm-4 my-2  border-3 border-black shadow"
+            [style.background]="( item.quantity==1 )?'yellow':''">
+
+            <img class="w-100  rounded-3 " style="cursor: pointer;" [src]="item.PrdimgURL" (click)="goToPrd(item.id)"
+                BorderShadow>
+
+            <h4 [class.text-decoration-line-through]="(item.quantity==0)?true:false">{{item.name}}</h4>
+            <h5 class="text-center ">{{item.quantity}}</h5>
+
+            @switch (item.categoryID) {
+            @case (1) {
+            <h3><i class="fa fa-table" aria-hidden="true"></i></h3>
+            }
+            @case(2){
+            <h3><i class="text-primary  fa-sharp fa-solid fa-chair"></i></h3>
+            }
+            @default {
+            <h3><i class="fa fa-television" aria-hidden="true"></i></h3>
+            }
+            }
+            <h5>{{item.price}}</h5>
+            <button class=" btn bg-danger mb-2 " (click)="addtoCard(item)"> add <i
+                    class="text-white  fa-sharp fa-solid fa-cart-plus modifyIcon" aria-hidden="true"></i></button>
+        </div>
+        }@empty {
+        <div class="text-center ">
+            <h3>No matching price</h3>
+        </div>
+        }
+
+    </div>
+
+</div>
+
+<!-- - -->

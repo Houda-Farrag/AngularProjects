@@ -1,0 +1,38 @@
+<!-- applying bordershadow in card product -->
+<div class="card " style="width: 18rem;" BorderShadow inhouver="50px 50px 90px yellow">
+    <img src="https://www.tutorialrepublic.com/examples/images/products/ipad.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+    </div>
+    <!-- using currency pipes -->
+    <h4 class="text-center text-danger ">{{price|currency:"EUR"}}</h4>
+</div>
+<div class="bg-black ">
+    <h3 class="border-2  my-4  border-danger shadow  text-danger ">{{date1 | date:'fullDate'}}</h3>
+</div>
+<div>
+    <label for="cridet">Enter cridet</label> <input class="w-50  input-group d-inline-block " type="text" id="cridet"
+        value={{credit|formatCredit}}>
+</div>
+
+
+<!-- 
+
+
+3-Make “Product Card” custom attribute directive that makes a rounded border with shadow around the div displaying products, as the following:
+
+a.	Use @HostListner to handle that on hover increases the shadow, and on mouse out back to the original shadow.
+b.	Use ngOnChanges in custom directives.
+
+
+
+
+4-	In your Product component:
+a.	Add Purchase date field, and use date pipe with it to display it in suitable format.
+b.	Use Currency pipe with the total price field.
+
+5-	Make a custom pipe, that formats the credit card number given in format like “0000000000000000” to this format “0000 – 0000 – 0000 – 0000”.
+
+
+ -->

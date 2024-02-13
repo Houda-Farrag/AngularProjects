@@ -1,0 +1,36 @@
+<div class="m-4 ">
+    <div><button class="btn btn-outline-danger  " (click)="goBack()">Home</button></div>
+    <div class=" d-flex ">
+
+        <div class=" ">
+            <div class="bg-body-secondary ">
+                <img [src]="productDetail?.PrdimgURL" class="" height="600px" alt="">
+            </div>
+        </div>
+        <div class="col  text-center rounded-5 mx-5">
+            <div class="text-start justify-content-between  ms-5 mt-5 col ">
+                <h3 class=" fs-1 mb-5 ">Details ID:{{productDetail?.id}}</h3>
+                <h4 class="mb-4 text-dark-emphasis fs-2  ">Name Products : {{productDetail?.name}}</h4>
+                <h4 class="mb-4 text-danger ">Price : {{productDetail?.price |currency}}</h4>
+                <h4>Material : {{productDetail?.Material}}</h4>
+                <h4>Quantity : {{productDetail?.quantity}}</h4>
+                <h4>CategoryId : {{productDetail?.categoryID}}</h4>
+
+            </div>
+        </div>
+        <!-- </div> -->
+
+    </div>
+    <div class="row-cols-4  m-5 ">
+
+        <button class="mx-3  col-2  btn  btn-dark  " (click)="prevProduct()"
+            [disabled]="(productCurrentIndex == 0 )?true:false">
+            prev</button>
+
+        <button class="mx-3 col-2  btn  btn-dark  "
+            [disabled]="(productCurrentIndex == productsListIDs.length-1)?true:false" (click)="nextProduct()">
+            next</button>
+    </div>
+
+
+</div>

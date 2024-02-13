@@ -1,0 +1,43 @@
+<div class="container w-50">
+    <h2>Product data</h2>
+    <form class="justify-content-center border border-4 p-5 my-4 ">
+        <!-- <div class="form-group">
+            <label for="id" class="form-label ">product id</label>
+            <input name="id" [(ngModel)]="productData.id" type="number" class=" form-control" placeholder="Id product">
+            <label for="">{{productData.id}}</label>
+        </div> -->
+        <button class="btn" (click)="printprodlist()">show</button>
+        <div class="form-group">
+            <label for="id" class="form-label ">product name</label>
+            <input name="name" [(ngModel)]="productData.name" type="text" class=" form-control"
+                placeholder="Nameproduct">
+        </div>
+        <div class="form-group">
+            <label for="id" class="form-label ">product category</label>
+            <input name="catigory" [(ngModel)]="productData.categoryID" type="number" class=" form-control"
+                placeholder="catigoryId">
+        </div>
+        <div class="form-group">
+            <label for="id" class="form-label ">product price</label>
+            <input name="price" [(ngModel)]="productData.price" type="number" class=" form-control" placeholder="price">
+        </div>
+        <div class="form-group">
+            <label for="id" class="form-label ">product quantity</label>
+            <input name="qunatity" [(ngModel)]="productData.quantity" type="number" class=" form-control"
+                placeholder="quantity">
+        </div>
+        <div class="form-group">
+            <label for="id" class="form-label ">product imgurl</label>
+            <input name="imgurl" [(ngModel)]="productData.PrdimgURL" type="text" class=" form-control"
+                placeholder="PrdimgURL">
+        </div>
+        <div class="form-group">
+            <label for="id" class="form-label ">product material</label>
+            <input name="material" [(ngModel)]="productData.Material" type="text" class=" form-control"
+                placeholder="Material">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+
+        <button class="btn btn-success mt-3 " (click)="addnew()">add prod</button>
+    </form>
+</div>

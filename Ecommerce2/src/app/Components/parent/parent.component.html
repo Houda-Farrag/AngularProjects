@@ -1,0 +1,40 @@
+<div class=" ">
+    <div class="container justify-content-center ">
+
+        <input type="number" class="form-control bg-dark-subtle  w-25 " style="height: 60px !important;" id="fPrice"
+            placeholder="Enter price" [(ngModel)]="filterPrice">
+
+    </div>
+
+    <app-products-list [filteredList]="filterPrice" (eventEmitter)="addParent($event)"></app-products-list>
+    <!-- day 3 task -->
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">name</th>
+                <th scope="col">price</th>
+                <th scope="col">quantity</th>
+                <th scope="col">total</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @for (item of cardSet; track item.id) {
+
+            <tr>
+                <th scope="row">{{item.id}}</th>
+                <th scope="row">{{item.name}}</th>
+                <th scope="row">{{item.price}}</th>
+                <th scope="row">{{findnum(item)}}</th>
+                <th scope="row">{{item.price * findnum(item)}}</th>
+                <button class="btn btn-dark my-1 " (click)="deleterow(item)">delete</button>
+            </tr>
+
+
+
+            }
+
+        </tbody>
+    </table>
+</div>
