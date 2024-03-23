@@ -6,6 +6,7 @@ Welcome to my E-Commerce project! This repository contains the code for an onlin
 - **Project Name**: E-Commerce
 - **Technology Stack**:
     - Angular 17 (Frontend)
+    - Bootstrap 5 (Frontend)
     - JSON Server (Backend)
 - **Purpose**: Learning and practice during the course at ITI
 - **Key Concepts Covered**:
@@ -14,7 +15,8 @@ Welcome to my E-Commerce project! This repository contains the code for an onlin
     - Forms in Angular
     - Observables and behavior subjects
     - HTTP client service usage
-    - And more!
+    - Using Guard
+    - 
 
 ## Getting Started
 1. Clone this repository to your local machine.
