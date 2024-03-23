@@ -1,7 +1,8 @@
 export interface User {
-    id: string,
+    id?: string,
     name: string,
     email: string,
-    mobile: number,
-    address: { city: string, postal :string}
+    mobile: [],
+    address: { city: string, postalCode: string, streat: string }
+    , password?: string
 }

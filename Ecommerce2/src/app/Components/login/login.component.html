@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="container w-50">
+    <h2>login</h2>
+    <form class="justify-content-center border border-4 p-5 my-4 " [formGroup]='loginform'>
+        <div>
+
+            <div class="form-group">
+                <label class="form-label ">email</label>
+                <input name="email" type="text" class=" form-control" placeholder="emial" formControlName="email">
+            </div>
+            <div class="form-group">
+                <label class="form-label">password</label>
+                <input name="password" type="email" class="form-control"
+                    [ngClass]="{'is-valid':(password?.valid && password?.dirty)?true:false , 'is-invalid':(password?.invalid && password?.dirty)?true:false }"
+                    placeholder="password" formControlName="password">
+            </div>
+            <button class="btn btn-success " type="submit" (click)="login($event)">submit</button>
+        </div>
+        <button class="btn btn-secondary  my-3 " (click)="toregister()">Create Account</button>
+    </form>
+
+
+</div>

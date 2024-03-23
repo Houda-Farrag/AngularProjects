@@ -122,5 +122,31 @@
       "id": "3",
       "name": "plastic"
     }
+  ],
+  "user": [
+    {
+      "id": "b075",
+      "name": "mahmoud",
+      "email": "mahmiti2022@gmail.com",
+      "mobile": [],
+      "address": {
+        "city": "Qena",
+        "postalCode": "83729",
+        "streat": "omar"
+      },
+      "password": "123456"
+    },
+    {
+      "id": "7550",
+      "name": "mm",
+      "email": "mahmoud@gmail.com",
+      "mobile": [],
+      "address": {
+        "city": "dd",
+        "postalCode": "234",
+        "streat": "gg"
+      },
+      "password": "123456"
+    }
   ]
 }

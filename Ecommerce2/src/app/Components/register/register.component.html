@@ -1,1 +1,81 @@
-<p>register works!</p>
+<div class="container w-50">
+    <h2>registiration</h2>
+    <form class="justify-content-center border border-4 p-5 my-4 " (ngSubmit)="onSubmit()" [formGroup]="userForm">
+
+        <div class="form-group">
+            <label class="form-label ">user name</label>
+            <input name="name" type="text" class=" form-control" placeholder="" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label class="form-label ">email</label>
+            <input name="email" type="email" class=" form-control" placeholder="" formControlName="email">
+        </div>
+
+        <div class="form-group  " formArrayName="mobile">
+            <label class="form-label d-block ">mobile</label>
+            @for (item of mobile.controls; track $index) {
+            <div class=" d-flex m-2 " [formGroupName]="$index">
+                <input type="number" name="phone" class="form-control m-2 w-75 " id="" placeholder="phone"
+                    formControlName="mob">
+                <button class="btn btn-danger p-0 m-0 " [disabled]="($index == 0 )?true:false"
+                    (click)="remove($index)">removeMobile</button>
+            </div>
+            }
+
+            <button class="btn my-2  btn-primary d-inline-block " (click)="addMobileNumber($event)">add Mobile</button>
+        </div>
+        <div class="form-group" formGroupName="address">
+            <label class="form-label ">address</label>
+            <div class="d-block ">
+
+                <input class="form-control " type="text" name="" id="" formControlName="city" placeholder="city">
+
+                <input class="form-control " type="text" name="" id="" formControlName="postalCode"
+                    placeholder="postalCode">
+
+                <input class="form-control " type="text" name="" id="" formControlName="streat" placeholder="streat">
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label ">Password</label>
+            <input name="password" type="text" class=" form-control" placeholder="" formControlName="password" [ngClass]="{'is-valid':(password?.valid && password?.dirty)?true:false , 'is-invalid':(password?.invalid && password?.dirty)?true:false }">
+        </div>
+        <div class="form-group">
+            <label class="form-label ">Confirm Password</label>
+            <input name="confirm" type="text" class=" form-control" placeholder="" formControlName="confirm">
+
+        </div>
+
+        <button class="btn btn-success mt-3 " type="submit" >regist</button>
+    </form>
+   
+
+</div>
+
+<!-- 
+    <div class="form-group " formArrayName="mobile">
+            <label class="form-label ">mobile</label>
+            @for (item of mobile.controls; track $index) {
+            <div class="d-flex ">
+                <input type="text" name="" id="" placeholder="name" formControlName="$index">
+                <button (click)="addMobileNumber()">removeMobile</button>
+            </div>
+            }
+
+            <button class="btn my-2  btn-primary d-inline-block ">add Mobile</button>
+        </div>
+        <div class="form-group" formGroupName="address">
+            <label class="form-label ">address</label>
+
+        </div>
+        <div class="form-group">
+            <label class="form-label ">Password</label>
+            <input name="password" type="text" class=" form-control" placeholder="">
+        </div>
+        <div class="form-group">
+            <label class="form-label ">Confirm Password</label>
+            <input name="confirm" type="text" class=" form-control" placeholder="">
+          
+        </div>
+ -->

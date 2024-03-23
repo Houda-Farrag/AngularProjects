@@ -47,5 +47,18 @@
                 <li class="nav-item">
                         <a class="h-calss" routerLink="/add-product" routerLinkActive="classactive">AddNewProduct</a>
                 </li>
+                <!-- @for(){ -->
+
+                @if(check == false ){
+                <li class="nav-item">
+                        <a class="h-calss" routerLink="/login" routerLinkActive="classactive">login</a>
+                </li>
+                }@else if(check == true) {
+                <li class="nav-item">
+                        <a class="h-calss" routerLink="/productWithApi" routerLinkActive=""
+                                (click)="logout()">logout</a>
+                </li>
+                }
+
         </ul>
 </div>
